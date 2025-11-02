@@ -1,0 +1,48 @@
+<div class="overlay" (click)="onClose()"></div>
+
+<div class="modal">
+  <div class="modal-header">
+    <h3>Add Mux</h3>
+    <button class="close-btn" (click)="onClose()">✖</button>
+  </div>
+
+  <div class="modal-body">
+
+    <label>SERVICE NAME</label>
+    <input type="text" [(ngModel)]="formData.serviceName" />
+
+    <label>INPUT IP</label>
+    <input type="text" [(ngModel)]="formData.inputIp" />
+
+    <label>INPUT PORT</label>
+    <input type="number" [(ngModel)]="formData.inputPort" />
+
+    <label>PRESET</label>
+    <input type="text" [(ngModel)]="formData.preset" />
+
+    <label>GPU</label>
+    <input type="text" [(ngModel)]="formData.gpu" />
+
+    <div class="checkbox-row">
+      <label><input type="checkbox" [(ngModel)]="formData.encryption" /> Encryption</label>
+      <label><input type="checkbox" [(ngModel)]="formData.pidMapping" /> PID MAPPING</label>
+    </div>
+
+    <div class="radio-row">
+      <label><input type="radio" [(ngModel)]="formData.bitrateType" value="CBR" /> CBR</label>
+      <label><input type="radio" [(ngModel)]="formData.bitrateType" value="VBR" /> VBR</label>
+    </div>
+
+    <label>CBR BITRATE</label>
+    <input type="text" [(ngModel)]="formData.bitrate" />
+
+    <label>PROGRAM ID</label>
+    <input type="text" [(ngModel)]="formData.programId" />
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="cancel" (click)="onClose()">Cancel</button>
+    <button class="add" (click)="onSubmit()">Add</button>
+  </div>
+</div>

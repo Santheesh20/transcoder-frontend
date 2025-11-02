@@ -1,12 +1,31 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
+  ]
 })
-export class App {
-  protected readonly title = signal('transcoder-admin');
+export class AppComponent {
+  isCollapsed = false;
+
+  constructor(private router: Router) {}
+
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+  logout() {
+    console.log('User logged out');
+    this.router.navigate(['/auth/login']); // ✅ Redirect to login page
+  }
 }
+

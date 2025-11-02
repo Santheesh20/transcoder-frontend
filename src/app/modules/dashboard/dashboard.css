@@ -1,0 +1,129 @@
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #d6d6d6;
+  padding-bottom: 5px;
+}
+
+.highlight {
+  color: #a26754;
+  font-weight: bold;
+}
+
+/* Status Boxes Container */
+.status-boxes {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+/* Individual Box */
+.box {
+  flex: 1;
+  min-width: 230px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 35px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+}
+
+/* Number Section */
+.box .number {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.box .number i {
+  font-size: 26px;
+  margin-top: 2px;
+}
+
+/* Labels Text */
+.box p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Color Theme for Box Types */
+.up {
+  background-color: #cb9382;
+}
+
+.down {
+  background-color: #fd5564;
+}
+
+.progress {
+  background-color: #fd7045;
+}
+
+.error {
+  background-color: #7b4859;
+}
+
+/* System Metrics Section */
+.system-metrics h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.metrics-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+  font-size: 1.5em;
+  color: #a26754;
+  margin-bottom: 5px;
+}
+
+.metric-name {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.metric-card button {
+  background-color: #a26754;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.metric-card button:hover {
+  background-color: #955846;
+}

@@ -1,0 +1,321 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout container */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  height: 100vh;
+}
+
+/* Logo section */
+.logo-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 35%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.logo-section h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Sidebar Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.menu li {
+  margin: 8px 0;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px 0 0 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu a i {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Hover + Active Effects */
+.menu a:hover,
+.menu a.active {
+  background-color: #ffffff;
+  color: #955846;
+  transform: scale(1.03);
+}
+
+.menu a:hover i,
+.menu a.active i {
+  color: #955846;
+}
+
+.menu a:hover::before,
+.menu a.active::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #ffffff;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Disable hover for sliders icon */
+.menu a:last-child:hover {
+  background: none;
+  color: inherit;
+  transform: none;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.content h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: #a26754;
+  font-weight: bold;
+}
+
+/* Status Boxes */
+.status-boxes {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  min-width: 230px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 35px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+}
+
+/* Bigger and bold icons in number */
+.box .number {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.box .number i {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.box p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Keep original colors */
+.up { background-color: #cb9382; }
+.down { background-color: #fd5564; }
+.progress { background-color: #fd7045; }
+.error { background-color: #7b4859; }
+
+/* System Metrics */
+.system-metrics h2 {
+  margin-bottom: 20px;
+}
+
+.metrics-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+  font-size: 1.5em;
+  color: #a26754;
+  margin-bottom: 5px;
+}
+
+.metric-name {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.metric-card button {
+  background-color: #a26754;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.metric-card button:hover {
+  background-color: #955846;
+}
+h1 {
+  border-bottom: 2px solid rgb(214, 211, 211); /* Creates a 2px solid black line */
+  padding-bottom: 5px; /* Adds space between the text and the line */
+  margin-bottom: 20px; /* Adds space below the line */
+}
+/* Existing styles remain unchanged... */
+
+/* Collapsible Sidebar Styles */
+
+/* Default sidebar width */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  height: 100vh;
+  transition: width 0.3s ease;
+}
+
+/* Toggle button at top-left */
+.toggle-btn {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* When collapsed */
+.main-container.collapsed .sidebar {
+  width: 80px;
+  padding-top: 15px;
+}
+
+/* Hide text when collapsed */
+.main-container.collapsed .menu span {
+  display: none;
+}
+
+.main-container.collapsed .logo-section {
+  display: none;
+}
+
+/* Center align icons when collapsed */
+.main-container.collapsed .menu a {
+  justify-content: center;
+  padding: 12px;
+}
+
+/* Content expands when sidebar is collapsed */
+.content {
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 260px);
+}
+
+.main-container.collapsed .content {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+/* Content Styling */
+.content {
+  background-color: #f5f5f5;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
