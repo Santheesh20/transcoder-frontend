@@ -1,17 +1,15 @@
-
-<div class="main-container" [ngClass]="{ 'collapsed': isCollapsed }">
+<div
+  class="main-container"
+  [ngClass]="{ 'collapsed': isCollapsed }"
+  *ngIf="!isAuthRoute()"
+>
   <div class="sidebar">
-    <!-- Toggle Button -->
     <div class="toggle-btn" (click)="toggleSidebar()">
       <i class="fa fa-bars"></i>
     </div>
-
-    <!-- Logo Section -->
     <div class="logo-section" *ngIf="!isCollapsed">
       <img src="assets/logo-white.png" alt="Logo" class="logo" />
     </div>
-
-    <!-- Sidebar Menu -->
     <ul class="menu">
       <li>
         <a routerLink="/dashboard" routerLinkActive="active">
@@ -40,25 +38,21 @@
           <span *ngIf="!isCollapsed">Profile</span>
         </a>
       </li>
+
       <li>
-  <a (click)="logout()">
-    <i class="fa-solid fa-right-from-bracket"></i>
-    <span *ngIf="!isCollapsed">Logout</span>
-  </a>
-</li>
-
-
-      <li class="settings-btn">
-        <a href="#">
-          <i class="fa-solid fa-sliders"></i>
+        <a (click)="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span *ngIf="!isCollapsed">Logout</span>
         </a>
       </li>
+
+      
     </ul>
   </div>
-
-  <!-- Content -->
   <div class="content">
     <router-outlet></router-outlet>
   </div>
 </div>
-
+<div *ngIf="isAuthRoute()" class="auth-wrapper">
+  <router-outlet></router-outlet>
+</div>

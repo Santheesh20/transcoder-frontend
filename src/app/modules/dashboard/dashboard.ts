@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -10,10 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./dashboard.css'],
 })
 export class DashboardComponent {
-  constructor(private router: Router) {}
 
-  logout() {
-    console.log('User logged out');
-    this.router.navigate(['/auth']);
-  }
+  @Output() toggle = new EventEmitter<void>();
+
+  constructor(private router: Router) {}
 }

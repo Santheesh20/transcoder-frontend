@@ -12,11 +12,11 @@
     </label>
   </div>
 
-  <!-- CHANNEL SECTION -->
+ 
   <div *ngIf="mode === 'channel'" class="channel-section">
     <h4 class="label">CHANNEL</h4>
 
-    <!-- Searchable dropdown -->
+    
     <div class="dropdown" (click)="toggleDropdown()">
       <input
         type="text"
@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <!-- IP + PORT SECTION -->
+ 
   <div *ngIf="mode === 'ip'" class="ip-section">
     <h4 class="label">Enter IP & Port</h4>
 
@@ -63,8 +63,6 @@
   </div>
 
   <button class="check-btn" (click)="onCheck()">Check</button>
-
-  <!-- OUTPUT BOX -->
   <div class="output-box">
     <p *ngIf="output">{{ output }}</p>
   </div>

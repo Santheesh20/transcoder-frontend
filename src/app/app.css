@@ -7,16 +7,12 @@
   overflow: hidden;
   font-family: Arial, sans-serif;
 }
-
-/* Layout container */
 .main-container {
   display: flex;
   height: 100vh;
   width: 100%;
   margin: 0;
 }
-
-/* Sidebar */
 .sidebar {
   width: 260px;
   background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
@@ -30,8 +26,6 @@
   padding-bottom: 20px;
   height: 100vh;
 }
-
-/* Logo section */
 .logo-section {
   width: 100%;
   text-align: center;
@@ -52,8 +46,6 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
-
-/* Sidebar Menu */
 .menu {
   list-style: none;
   padding: 0;
@@ -87,8 +79,6 @@
   text-align: center;
   color: #fff;
 }
-
-/* Hover + Active Effects */
 .menu a:hover,
 .menu a.active {
   background-color: #ffffff;
@@ -112,15 +102,11 @@
   background-color: #ffffff;
   border-radius: 0 3px 3px 0;
 }
-
-/* Disable hover for sliders icon */
 .menu a:last-child:hover {
   background: none;
   color: inherit;
   transform: none;
 }
-
-/* Main Content */
 .content {
   flex: 1;
   background-color: #f5f5f5;
@@ -140,8 +126,6 @@
   color: #a26754;
   font-weight: bold;
 }
-
-/* Status Boxes */
 .status-boxes {
   display: flex;
   gap: 25px;
@@ -166,8 +150,6 @@
 .box:hover {
   transform: translateY(-4px);
 }
-
-/* Bigger and bold icons in number */
 .box .number {
   font-size: 28px;
   font-weight: 700;
@@ -190,14 +172,10 @@
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-
-/* Keep original colors */
 .up { background-color: #cb9382; }
 .down { background-color: #fd5564; }
 .progress { background-color: #fd7045; }
 .error { background-color: #7b4859; }
-
-/* System Metrics */
 .system-metrics h2 {
   margin-bottom: 20px;
 }

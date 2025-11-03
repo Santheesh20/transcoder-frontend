@@ -31,7 +31,6 @@
   margin-bottom: 5px;
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
   width: 350px;
@@ -76,7 +75,6 @@
   background: #f3f3f3;
 }
 
-/* IP + PORT layout */
 .ip-port-row {
   display: flex;
   gap: 40px;
@@ -95,7 +93,6 @@
   margin-bottom: 5px;
 }
 
-/* Underline inputs */
 .underline-input {
   width: 250px;
   border: none;
@@ -109,8 +106,6 @@
 .underline-input:focus {
   border-bottom-color: #a26754;
 }
-
-/* Button */
 .check-btn {
   margin-top: 20px;
   background: #b12c19;
@@ -125,8 +120,6 @@
 .check-btn:hover {
   opacity: 0.9;
 }
-
-/* Output box */
 .output-box {
   margin-top: 25px;
   width: 95%;

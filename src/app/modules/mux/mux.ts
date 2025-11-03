@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AddMuxComponent } from './add-mux/add-mux'; // ✅ Import AddMuxComponent
+import { AddMuxComponent } from './add-mux/add-mux';
 
 interface Feed {
   serviceName: string;
@@ -15,13 +15,13 @@ interface Feed {
 @Component({
   selector: 'app-mux',
   standalone: true,
-  imports: [CommonModule, FormsModule, AddMuxComponent], // ✅ Add AddMuxComponent
+  imports: [CommonModule, FormsModule, AddMuxComponent],
   templateUrl: './mux.html',
   styleUrls: ['./mux.css'],
 })
 export class MuxComponent implements OnInit {
   searchTerm = '';
-  showAddForm = false;  // ✅ Control modal visibility
+  showAddForm = false;  
 
   muxFeeds: Feed[] = [
     { serviceName: 'Movie Plus', lcn: 189, inputIp: '239.7.48.135', inputPort: 8054, preset: 'MAX-H.264-HEVC-SD', status: 'Error' },
@@ -64,29 +64,28 @@ export class MuxComponent implements OnInit {
     console.log('Delete:', feed);
   }
 
-  // ✅ Show form
+  
   openAddForm() {
     this.showAddForm = true;
   }
 
-  // ✅ Close form
   closeAddForm() {
     this.showAddForm = false;
   }
 
-  // ✅ Handle form submission
+ 
   addMuxFeed(newFeed: any) {
-    // Adapt it to match Feed interface and push to list
+    
     this.muxFeeds.push({
       serviceName: newFeed.serviceName,
-      lcn: this.muxFeeds.length + 1, // Auto-generate LCN or handle another way
+      lcn: this.muxFeeds.length + 1, 
       inputIp: newFeed.inputIp,
       inputPort: Number(newFeed.inputPort),
       preset: newFeed.preset,
-      status: 'Progress', // ✅ Default or custom
+      status: 'Progress', 
     });
 
-    this.applyFilter(); // Refresh view
+    this.applyFilter(); 
     this.closeAddForm();
   }
 }

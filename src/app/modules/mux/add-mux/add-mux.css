@@ -1,4 +1,4 @@
-/* Background overlay */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -9,7 +9,6 @@
   backdrop-filter: blur(3px);
 }
 
-/* Modal box */
 .modal {
   position: fixed;
   top: 50%;
@@ -25,7 +24,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Header */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -43,7 +41,6 @@
   cursor: pointer;
 }
 
-/* Inputs */
 .modal-body label {
   font-size: 12px;
   font-weight: bold;
@@ -59,14 +56,12 @@
   border-radius: 4px;
 }
 
-/* Checkbox & Radio rows */
 .checkbox-row, .radio-row {
   margin: 15px 0;
   display: flex;
   gap: 20px;
 }
 
-/* Footer buttons */
 .modal-footer {
   display: flex;
   justify-content: center;

@@ -1,7 +1,7 @@
 <div class="mux-wrapper">
   <h1>Welcome to <span class="highlight">Transcoder</span></h1>
 
-  <!-- Status Boxes -->
+ 
   <div class="status-boxes">
     <div class="box up">
       <p class="number">
@@ -28,8 +28,6 @@
       <p>ERROR</p>
     </div>
   </div>
-
-  <!-- Search + Action Buttons -->
   <div class="top-bar">
     <input
       type="text"
@@ -42,12 +40,12 @@
     <div class="actions">
       <button class="btn start">Start</button>
       <button class="btn stop">Stop</button>
-      <button class="btn add" (click)="openAddForm()">+ Add</button> <!-- ✅ Button click -->
+      <button class="btn add" (click)="openAddForm()">+ Add</button> 
       <button class="btn export">Export</button>
     </div>
   </div>
 
-  <!-- Table -->
+  
   <table class="mux-table">
     <thead>
       <tr>
@@ -80,7 +78,7 @@
     </tbody>
   </table>
 
-  <!-- ✅ Add Mux Modal Component -->
+  
   <app-add-mux
     *ngIf="showAddForm"
     (close)="closeAddForm()"

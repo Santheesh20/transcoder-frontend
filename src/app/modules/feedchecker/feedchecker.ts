@@ -13,7 +13,7 @@ export class FeedcheckerComponent {
   mode: string = 'channel';
   searchText: string = '';
   ipAddress: string = '';
-  port: string = '';    // <-- Added this line
+  port: string = '';   
   output: string = '';
 
   channels: string[] = ['Channel 1', 'Channel 2', 'Channel 3', 'Channel 4'];
