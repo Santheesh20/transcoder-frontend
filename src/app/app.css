@@ -15,6 +15,7 @@
   margin: 0;
 }
 
+/* Sidebar */
 .sidebar {
   width: 260px;
   background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
@@ -72,13 +73,14 @@
   color: #ffffff;
 }
 
+/* Hover and Active Effects */
 .menu a:hover {
-  background: rgba(255,255,255,0.1);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   color: #ffffff;
 }
 
 .menu a.active {
-  background: rgba(255,255,255,0.2);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   color: #ffffff;
   position: relative;
 }
@@ -93,6 +95,7 @@
   background: #5c3024;
 }
 
+/* Toggle Button */
 .toggle-btn {
   font-size: 20px;
   color: white;
@@ -102,6 +105,7 @@
   text-align: left;
 }
 
+/* Collapsed State */
 .main-container.collapsed .sidebar {
   width: 80px;
 }
@@ -118,6 +122,7 @@
   justify-content: center;
 }
 
+/* Content Area */
 .content {
   width: calc(100% - 260px);
   height: 100vh;
