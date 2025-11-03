@@ -38,14 +38,19 @@ export class FeedcheckerComponent {
   }
 
   onCheck() {
-    if (this.mode === 'channel') {
-      this.output = this.selectedChannel
-        ? `Checking status for channel: ${this.selectedChannel}`
-        : 'Please select a channel first!';
+  if (this.mode === 'channel') {
+    if (this.selectedChannel) {
+      this.output = `Checking status for channel: ${this.selectedChannel}`;
     } else {
-      this.output = this.ipAddress && this.port
-        ? `Checking IP: ${this.ipAddress} on port ${this.port}`
-        : 'Please enter both IP address and port!';
+      this.output = 'Please select a channel first!';
+    }
+  } else {
+    if (this.ipAddress && this.port) {
+      this.output = `Checking IP: ${this.ipAddress} on port ${this.port}`;
+    } else {
+      this.output = 'Please enter both IP address and port!';
     }
   }
+}
+
 }
