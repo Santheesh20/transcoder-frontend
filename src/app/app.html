@@ -4,16 +4,15 @@
   *ngIf="!isAuthRoute()"
 >
   <div class="sidebar">
-    <div class="toggle-btn" (click)="toggleSidebar()">
-      <i class="fa fa-bars"></i>
-    </div>
-    <div class="logo-section" *ngIf="!isCollapsed">
+    <div class="logo-section">
       <img src="assets/logo-white.png" alt="Logo" class="logo" />
     </div>
+
     <ul class="menu">
+      
       <li>
-        <a routerLink="/dashboard" routerLinkActive="active">
-          <i class="fa-solid fa-chart-line"></i>
+        <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa-solid fa-house"></i>
           <span *ngIf="!isCollapsed">Dashboard</span>
         </a>
       </li>
@@ -45,14 +44,19 @@
           <span *ngIf="!isCollapsed">Logout</span>
         </a>
       </li>
-
-      
+      <div class="toggle-btn" (click)="toggleSidebar()">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </div>
     </ul>
+
+    
   </div>
+
   <div class="content">
     <router-outlet></router-outlet>
   </div>
 </div>
+
 <div *ngIf="isAuthRoute()" class="auth-wrapper">
   <router-outlet></router-outlet>
 </div>

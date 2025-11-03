@@ -88,4 +88,5 @@ export class MuxComponent implements OnInit {
     this.applyFilter(); 
     this.closeAddForm();
   }
-}
+} 
+
