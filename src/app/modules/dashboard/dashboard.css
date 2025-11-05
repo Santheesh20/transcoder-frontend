@@ -1,3 +1,4 @@
+/* this is heading style */
 h1 {
   font-size: 28px;
   color: #333;
@@ -6,10 +7,13 @@ h1 {
   padding-bottom: 5px;
 }
 
+/* this is for highlighting text */
 .highlight {
   color: #a26754;
   font-weight: bold;
 }
+
+/* box container layout */
 .status-boxes {
   display: flex;
   gap: 25px;
@@ -17,6 +21,8 @@ h1 {
   margin-bottom: 50px;
   justify-content: space-between;
 }
+
+/* main small boxes styling */
 .box {
   flex: 1;
   min-width: 230px;
@@ -30,9 +36,12 @@ h1 {
   transition: transform 0.2s ease;
 }
 
+/* box hover effect */
 .box:hover {
   transform: translateY(-4px);
 }
+
+/* number inside box style */
 .box .number {
   font-size: 28px;
   font-weight: 700;
@@ -43,32 +52,35 @@ h1 {
   gap: 8px;
 }
 
+/* icon size inside number */
 .box .number i {
   font-size: 26px;
   margin-top: 2px;
 }
 
+/* subtext inside box */
 .box p {
   margin: 8px 0 0;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
+/* individual colors for boxes */
 .up {
   background-color: #cb9382;
 }
-
 .down {
   background-color: #fd5564;
 }
-
 .progress {
   background-color: #fd7045;
 }
-
 .error {
   background-color: #7b4859;
 }
+
+/* system section heading */
 .system-metrics h2 {
   margin-bottom: 20px;
   color: #333;
@@ -76,12 +88,14 @@ h1 {
   font-weight: 600;
 }
 
+/* metric cards layout */
 .metrics-grid {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
+/* single card style */
 .metric-card {
   flex: 1;
   min-width: 220px;
@@ -92,19 +106,22 @@ h1 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* main value styling */
 .metric-value {
   font-size: 1.5em;
   color: #a26754;
   margin-bottom: 5px;
 }
 
+/* card name text */
 .metric-name {
   color: #555;
   margin-bottom: 10px;
 }
 
+/* button style */
 .metric-card button {
-  background-color: #a26754;
+  background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -113,6 +130,7 @@ h1 {
   transition: 0.3s ease;
 }
 
+/* button hover effect */
 .metric-card button:hover {
   background-color: #955846;
 }

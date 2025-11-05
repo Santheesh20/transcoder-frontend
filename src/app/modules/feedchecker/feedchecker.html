@@ -1,42 +1,55 @@
 <div class="feed-checker-container">
   <h3 class="title">FEED CHECKER</h3>
 
+  <!-- radio buttons to choose mode -->
   <div class="radio-group">
     <label>
-      <input type="radio" name="mode" value="channel" [(ngModel)]="mode" checked />
+      <input
+        type="radio"
+        name="mode"
+        value="channel"
+        [ngModel]="mode()"
+        (ngModelChange)="mode.set($event)"
+      />
       <span>Channel</span>
     </label>
+
     <label>
-      <input type="radio" name="mode" value="ip" [(ngModel)]="mode" />
+      <input
+        type="radio"
+        name="mode"
+        value="ip"
+        [ngModel]="mode()"
+        (ngModelChange)="mode.set($event)"
+      />
       <span>IP</span>
     </label>
   </div>
 
- 
-  <div *ngIf="mode === 'channel'" class="channel-section">
+  <!-- CHANNEL MODE -->
+  <div *ngIf="mode() === 'channel'" class="channel-section">
     <h4 class="label">CHANNEL</h4>
 
-    
     <div class="dropdown" (click)="toggleDropdown()">
       <input
         type="text"
         placeholder="Select Channel"
-        [(ngModel)]="searchText"
-        (input)="filterChannels()"
+        [ngModel]="searchText()"
+        (ngModelChange)="searchText.set($event); filterChannels()"
         (click)="$event.stopPropagation()"
       />
       <span class="arrow">&#9650;</span>
 
-      <ul class="dropdown-list" *ngIf="dropdownOpen">
-        <li *ngFor="let channel of filteredChannels" (click)="selectChannel(channel)">
+      <ul class="dropdown-list" *ngIf="dropdownOpen()">
+        <li *ngFor="let channel of filteredChannels()" (click)="selectChannel(channel)">
           {{ channel }}
         </li>
       </ul>
     </div>
   </div>
 
- 
-  <div *ngIf="mode === 'ip'" class="ip-section">
+  <!-- IP MODE -->
+  <div *ngIf="mode() === 'ip'" class="ip-section">
     <h4 class="label">Enter IP & Port</h4>
 
     <div class="ip-port-row">
@@ -46,7 +59,8 @@
           type="text"
           class="ip-input underline-input"
           placeholder="Enter IP Address"
-          [(ngModel)]="ipAddress"
+          [ngModel]="ipAddress()"
+          (ngModelChange)="ipAddress.set($event)"
         />
       </div>
 
@@ -56,14 +70,18 @@
           type="text"
           class="port-input underline-input"
           placeholder="Enter Port"
-          [(ngModel)]="port"
+          [ngModel]="port()"
+          (ngModelChange)="port.set($event)"
         />
       </div>
     </div>
   </div>
 
+  <!-- button to run check -->
   <button class="check-btn" (click)="onCheck()">Check</button>
+
+  <!-- output message -->
   <div class="output-box">
-    <p *ngIf="output">{{ output }}</p>
+    <p *ngIf="output()">{{ output() }}</p>
   </div>
 </div>

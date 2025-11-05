@@ -1,51 +1,56 @@
 <div class="mux-wrapper">
   <h1>Welcome to <span class="highlight">Transcoder</span></h1>
 
- 
+  <!-- status counters using computed signals -->
   <div class="status-boxes">
     <div class="box up">
       <p class="number">
-        <i class="fa-solid fa-arrow-up"></i> {{ upCount }}
+        <i class="fa-solid fa-arrow-up"></i> {{ upCount() }}
       </p>
       <p>UP</p>
     </div>
+
     <div class="box down">
       <p class="number">
-        <i class="fa-solid fa-arrow-down"></i> {{ downCount }}
+        <i class="fa-solid fa-arrow-down"></i> {{ downCount() }}
       </p>
       <p>DOWN</p>
     </div>
+
     <div class="box progress">
       <p class="number">
-        <i class="fa-solid fa-spinner"></i> {{ progressCount }}
+        <i class="fa-solid fa-spinner"></i> {{ progressCount() }}
       </p>
       <p>PROGRESS</p>
     </div>
+
     <div class="box error">
       <p class="number">
-        <i class="fa-solid fa-circle-exclamation"></i> {{ errorCount }}
+        <i class="fa-solid fa-circle-exclamation"></i> {{ errorCount() }}
       </p>
       <p>ERROR</p>
     </div>
   </div>
+
+  <!-- search + action buttons -->
   <div class="top-bar">
     <input
       type="text"
       placeholder="Search"
-      [(ngModel)]="searchTerm"
-      (input)="applyFilter()"
       class="search-box"
+      [ngModel]="searchTerm()"
+      (ngModelChange)="searchTerm.set($event); applyFilter()"
     />
 
     <div class="actions">
       <button class="btn start">Start</button>
       <button class="btn stop">Stop</button>
-      <button class="btn add" (click)="openAddForm()">+ Add</button> 
+      <button class="btn add" (click)="openAddForm()">+ Add</button>
       <button class="btn export">Export</button>
     </div>
   </div>
 
-  
+  <!-- data table -->
   <table class="mux-table">
     <thead>
       <tr>
@@ -62,7 +67,7 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let feed of filteredFeeds; let i = index">
+      <tr *ngFor="let feed of filteredFeeds(); let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ feed.serviceName }}</td>
         <td>{{ feed.lcn }}</td>
@@ -78,9 +83,9 @@
     </tbody>
   </table>
 
-  
+  <!-- add form modal -->
   <app-add-mux
-    *ngIf="showAddForm"
+    *ngIf="showAddForm()"
     (close)="closeAddForm()"
     (submitForm)="addMuxFeed($event)"
   ></app-add-mux>

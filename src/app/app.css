@@ -1,3 +1,4 @@
+/* this is the root container of the app */
 :host {
   display: block;
   height: 100vh;
@@ -8,6 +9,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* layout main container */
 .main-container {
   display: flex;
   height: 100vh;
@@ -15,7 +17,7 @@
   margin: 0;
 }
 
-/* Sidebar */
+/* Sidebar area styles */
 .sidebar {
   width: 260px;
   background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
@@ -29,12 +31,14 @@
   transition: width 0.3s ease;
 }
 
+/* logo area on top of sidebar */
 .logo-section {
   width: 100%;
   text-align: center;
   margin-bottom: 25px;
 }
 
+/* logo image sizing */
 .logo {
   width: 40%;
   height: auto;
@@ -43,6 +47,7 @@
   transition: width 0.3s ease;
 }
 
+/* menu list styling */
 .menu {
   list-style: none;
   padding: 0;
@@ -51,10 +56,12 @@
   width: 100%;
 }
 
+/* each list item reset padding */
 .menu li {
   padding: 0;
 }
 
+/* menu link style */
 .menu a {
   display: flex;
   align-items: center;
@@ -66,6 +73,7 @@
   transition: background 0.25s ease, color 0.25s ease;
 }
 
+/* icon style inside menu */
 .menu a i {
   font-size: 18px;
   min-width: 22px;
@@ -73,18 +81,20 @@
   color: #ffffff;
 }
 
-/* Hover and Active Effects */
+/* hover effect for menu links */
 .menu a:hover {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   color: #ffffff;
 }
 
+/* active link style */
 .menu a.active {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   color: #ffffff;
   position: relative;
 }
 
+/* small bar on right for active item */
 .menu a.active::after {
   content: "";
   position: absolute;
@@ -95,7 +105,7 @@
   background: #5c3024;
 }
 
-/* Toggle Button */
+/* collapse/expand button style */
 .toggle-btn {
   font-size: 20px;
   color: white;
@@ -105,24 +115,27 @@
   text-align: left;
 }
 
-/* Collapsed State */
+/* collapsed mode: make sidebar thin */
 .main-container.collapsed .sidebar {
   width: 80px;
 }
 
+/* logo gets a bit bigger when collapsed */
 .main-container.collapsed .logo {
   width: 65%;
 }
 
+/* hide text in menu when collapsed */
 .main-container.collapsed .menu span {
   display: none;
 }
 
+/* center icons when collapsed */
 .main-container.collapsed .menu a {
   justify-content: center;
 }
 
-/* Content Area */
+/* page content area on the right */
 .content {
   width: calc(100% - 260px);
   height: 100vh;
@@ -131,6 +144,7 @@
   transition: margin-left 0.3s ease, width 0.3s ease;
 }
 
+/* resize content when sidebar is collapsed */
 .main-container.collapsed .content {
   width: calc(100% - 80px);
   margin-left: 80px;
