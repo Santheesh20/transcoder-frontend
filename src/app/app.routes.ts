@@ -8,10 +8,18 @@ import { LogoutComponent } from './modules/auth/logout/logout';
 
 export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+
+  {
+    path: 'dashboard/more',
+    loadComponent: () =>
+      import('./modules/dashboard/more/more').then(m => m.MoreComponent),
+  },
+
   { path: 'mux', component: MuxComponent },
   { path: 'feedchecker', component: FeedcheckerComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/logout', component: LogoutComponent },
-  { path: '', redirectTo: 'auth/login', pathMatch: 'full' }, 
+
+  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
 ];

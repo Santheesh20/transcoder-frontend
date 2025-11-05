@@ -11,14 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class DashboardComponent {
 
-  // here i used constructor  to get router so we can navigate
   constructor(private router: Router) {}
 
-  // logout
   logout() {
-    console.log('User logged out'); // a console msg
-    this.router.navigate(['/auth']); // will go to the  auth page
+    console.log('User logged out');
+    this.router.navigate(['/auth']);
   }
-  
-  
+
+  // ✅ This function will navigate to More Component
+  goToMore() {
+    this.router.navigate(['/dashboard/more']);
+  }
 }

@@ -1,0 +1,49 @@
+.gpu-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: #b12c19;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.back-btn:hover {
+  opacity: 0.9;
+}
+
+.gpu-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+}
+
+.gpu-table th, .gpu-table td {
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.gpu-table thead {
+  background: #f3f3f3;
+  font-weight: 600;
+}
+
+.gpu-table tbody tr:hover {
+  background: #fafafa;
+}

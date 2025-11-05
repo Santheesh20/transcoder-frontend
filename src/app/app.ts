@@ -47,4 +47,5 @@ export class AppComponent {
     console.log('User logged out');
     this.router.navigate(['/auth/login']);
   }
+  
 }
