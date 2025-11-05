@@ -19,4 +19,6 @@ export class DashboardComponent {
     console.log('User logged out'); // a console msg
     this.router.navigate(['/auth']); // will go to the  auth page
   }
+  
+  
 }
