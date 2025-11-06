@@ -7,32 +7,27 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* LEFT IMAGE PANEL — using BACKGROUND instead of <img> */
 .left-image {
   flex: 1.2;
   height: 100vh;
-  background: url("/assets/login-bg.png") no-repeat;
-  background-size: contain;          /* ✅ Matches reference exactly */
-  background-position: center;       /* ✅ Centers image properly */
 
-  /* smooth rounded edges like reference */
+  
+  background: url("/assets/login-bg.png") no-repeat center;
+  background-size: contain;
+
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
-
-  /* slight diagonal cut effect */
   clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
 }
 
-/* RIGHT SIDE (FORM AREA) */
 .right-form {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 120px 0 90px;  /* perfect breathing space */
+  padding: 0 120px 0 90px;
 }
 
-/* LOGO */
 .logo {
   text-align: center;
   margin-bottom: 30px;
@@ -43,7 +38,6 @@
   opacity: 0.95;
 }
 
-/* TEXT HEADING */
 h1 {
   font-size: 36px;
   font-weight: 800;
@@ -52,7 +46,6 @@ h1 {
   margin-bottom: 35px;
 }
 
-/* FORM STYLES */
 .form {
   display: flex;
   flex-direction: column;
@@ -71,7 +64,6 @@ h1 {
   border-radius: 6px;
   font-size: 15px;
   outline: none;
-  background: #ffffff;
   transition: 0.3s;
 }
 
@@ -79,7 +71,6 @@ h1 {
   border-color: #a26754;
 }
 
-/* FORGOT PASSWORD */
 .forgot {
   text-align: right;
   margin-top: -10px;
@@ -91,7 +82,6 @@ h1 {
   cursor: pointer;
 }
 
-/* LOGIN BUTTON */
 .login-btn {
   margin-top: 12px;
   padding: 14px;
@@ -108,17 +98,18 @@ h1 {
   filter: brightness(0.92);
 }
 
-/* RESPONSIVE */
 @media (max-width: 950px) {
   .login-wrapper {
     flex-direction: column;
   }
+
   .left-image {
     height: 40vh;
     border-radius: 0;
     clip-path: none;
     background-size: cover;
   }
+
   .right-form {
     padding: 30px;
   }
