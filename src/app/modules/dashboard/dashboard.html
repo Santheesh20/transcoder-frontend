@@ -1,57 +1,66 @@
-<h1>Welcome to <span class="highlight">Transcoder</span></h1>
-<div class="status-boxes">
+<div class="dashboard-container">
 
-  <div class="box up">
-    <p class="number">
-      <i class="fa-solid fa-arrow-up"></i> 67
-    </p>
-    <p>UP</p>
-  </div>
+  
+  <h1 class="page-title">
+    Welcome to <span class="highlight">Transcoder</span>
+  </h1>
 
-  <div class="box down">
-    <p class="number">
-      <i class="fa-solid fa-arrow-down"></i> 0
-    </p>
-    <p>DOWN</p>
-  </div>
+  <div class="status-boxes">
 
-  <div class="box progress">
-    <p class="number">
-      <i class="fa-solid fa-spinner"></i> 0
-    </p>
-    <p>PROGRESS</p>
-  </div>
-
-  <div class="box error">
-    <p class="number">
-      <i class="fa-solid fa-circle-exclamation"></i> 2
-    </p>
-    <p>ERROR</p>
-  </div>
-</div>
-
-<div class="system-metrics">
-  <h2>System Metrics</h2>
-
-  <div class="metrics-grid">
-    <div class="metric-card">
-      <p class="metric-value">9.60%</p>
-      <p class="metric-name">CPU</p>
-      <button>Refresh</button>
+    <div class="box up">
+      <p class="number">
+        <i class="fa-solid fa-arrow-up"></i> 67
+      </p>
+      <p>UP</p>
     </div>
 
-    <div class="metric-card">
-      <p class="metric-value">79Gi</p>
-      <p class="metric-name">RAM</p>
-      <button>Refresh</button>
+    <div class="box down">
+      <p class="number">
+        <i class="fa-solid fa-arrow-down"></i> 0
+      </p>
+      <p>DOWN</p>
     </div>
 
-    <div class="metric-card">
-      <p class="metric-value">GPU</p>
-      <p class="metric-name">NVIDIA</p>
-     
-      <button (click)="goToMore()">More</button>
+    <div class="box progress">
+      <p class="number">
+        <i class="fa-solid fa-spinner"></i> 0
+      </p>
+      <p>PROGRESS</p>
+    </div>
+
+    <div class="box error">
+      <p class="number">
+        <i class="fa-solid fa-circle-exclamation"></i> 2
+      </p>
+      <p>ERROR</p>
     </div>
 
   </div>
+
+  <div class="system-metrics">
+    <h2>System Metrics</h2>
+
+    <div class="metrics-grid">
+
+      <div class="metric-card">
+        <p class="metric-value">9.60%</p>
+        <p class="metric-name">CPU</p>
+        <button>Refresh</button>
+      </div>
+
+      <div class="metric-card">
+        <p class="metric-value">79Gi</p>
+        <p class="metric-name">RAM</p>
+        <button>Refresh</button>
+      </div>
+
+      <div class="metric-card">
+        <p class="metric-value">GPU</p>
+        <p class="metric-name">NVIDIA</p>
+        <button (click)="goToMore()">More</button>
+      </div>
+
+    </div>
+  </div>
+
 </div>

@@ -3,9 +3,9 @@
   [ngClass]="{ 'collapsed': isCollapsed() }"
   *ngIf="!isAuthRoute()"
 >
- 
+
+  
   <div class="sidebar">
-    
     <div class="logo-section">
       <img src="assets/logo-white.png" alt="Logo" class="logo" />
     </div>
@@ -33,31 +33,42 @@
         </a>
       </li>
 
-      <li>
-        <a routerLink="/profile" routerLinkActive="active">
-          <i class="fa-solid fa-user"></i>
-          <span>Profile</span>
-        </a>
-      </li>
-
-      <li>
-        <a (click)="logout()">
-          <i class="fa-solid fa-right-from-bracket"></i>
-          <span>Logout</span>
-        </a>
-      </li>
-
-      <div class="toggle-btn" (click)="toggleSidebar()">
-        <i class="fa-solid fa-bars-staggered"></i>
-      </div>
-
     </ul>
   </div>
 
+  
   <div class="content">
+
+    
+    <div class="header-bar">
+
+      
+      <button class="header-toggle-btn" (click)="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      
+      <div class="header-right" (click)="toggleUserMenu()">
+
+        <div class="user-info">
+          <div class="user-circle">{{ usernameInitial }}</div>
+          <span class="user-name">Admin</span>
+          <i class="fa-solid" [ngClass]="showUserMenu() ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </div>
+
+        <div class="dropdown" *ngIf="showUserMenu()">
+          <a (click)="goToProfile()"><i class="fa-regular fa-user"></i> Profile</a>
+          <a (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+
+      </div>
+
+    </div>
+
     <router-outlet></router-outlet>
   </div>
 </div>
+
 
 <div *ngIf="isAuthRoute()" class="auth-wrapper">
   <router-outlet></router-outlet>

@@ -1,38 +1,30 @@
 <div class="mux-wrapper">
-  <h1> <span class="highlight">Mux</span>  List</h1>
+  <h1><span class="highlight">Mux</span> List</h1>
 
-  <!-- status counters using computed signals -->
+  
   <div class="status-boxes">
     <div class="box up">
-      <p class="number">
-        <i class="fa-solid fa-arrow-up"></i> {{ upCount() }}
-      </p>
+      <p class="number"><i class="fa-solid fa-arrow-up"></i> {{ upCount() }}</p>
       <p>UP</p>
     </div>
 
     <div class="box down">
-      <p class="number">
-        <i class="fa-solid fa-arrow-down"></i> {{ downCount() }}
-      </p>
+      <p class="number"><i class="fa-solid fa-arrow-down"></i> {{ downCount() }}</p>
       <p>DOWN</p>
     </div>
 
     <div class="box progress">
-      <p class="number">
-        <i class="fa-solid fa-spinner"></i> {{ progressCount() }}
-      </p>
+      <p class="number"><i class="fa-solid fa-spinner"></i> {{ progressCount() }}</p>
       <p>PROGRESS</p>
     </div>
 
     <div class="box error">
-      <p class="number">
-        <i class="fa-solid fa-circle-exclamation"></i> {{ errorCount() }}
-      </p>
+      <p class="number"><i class="fa-solid fa-circle-exclamation"></i> {{ errorCount() }}</p>
       <p>ERROR</p>
     </div>
   </div>
 
-  <!-- search + action buttons -->
+ 
   <div class="top-bar">
     <input
       type="text"
@@ -45,12 +37,15 @@
     <div class="actions">
       <button class="btn start">Start</button>
       <button class="btn stop">Stop</button>
+
       <button class="btn add" (click)="openAddForm()">+ Add</button>
+
+
       <button class="btn export">Export</button>
     </div>
   </div>
 
-  <!-- data table -->
+ 
   <table class="mux-table">
     <thead>
       <tr>
@@ -82,11 +77,4 @@
       </tr>
     </tbody>
   </table>
-
-  <!-- add form modal -->
-  <app-add-mux
-    *ngIf="showAddForm()"
-    (close)="closeAddForm()"
-    (submitForm)="addMuxFeed($event)"
-  ></app-add-mux>
 </div>

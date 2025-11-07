@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-mux',
@@ -11,8 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddMuxComponent {
 
-  @Output() close = new EventEmitter<void>();
-  @Output() submitForm = new EventEmitter<any>();
+  constructor(private router: Router) {}
 
   formData = {
     serviceName: '',
@@ -28,12 +28,10 @@ export class AddMuxComponent {
   };
 
   onSubmit() {
-    this.submitForm.emit(this.formData);
-    this.close.emit();
+    
   }
 
-  onClose() {
-    this.close.emit();
+  onCancel() {
+    this.router.navigate(['/mux']);
   }
-
 }

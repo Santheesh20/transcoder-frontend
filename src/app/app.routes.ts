@@ -16,8 +16,21 @@ export const routes: Routes = [
   },
 
   { path: 'mux', component: MuxComponent },
+
+  
+  {
+    path: 'mux/add',
+    loadComponent: () =>
+      import('./modules/mux/add-mux/add-mux').then(m => m.AddMuxComponent),
+  },
+
+  
   { path: 'feedchecker', component: FeedcheckerComponent },
+
+  
   { path: 'profile', component: ProfileComponent },
+
+  
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/logout', component: LogoutComponent },
 

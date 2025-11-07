@@ -1,7 +1,7 @@
 import { Component, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AddMuxComponent } from './add-mux/add-mux';
+import { Router } from '@angular/router';
 
 interface Feed {
   serviceName: string;
@@ -15,29 +15,27 @@ interface Feed {
 @Component({
   selector: 'app-mux',
   standalone: true,
-  imports: [CommonModule, FormsModule, AddMuxComponent],
+  imports: [CommonModule, FormsModule],
   templateUrl: './mux.html',
   styleUrls: ['./mux.css'],
 })
 export class MuxComponent implements OnInit {
 
-  // search box value as signal
+  constructor(private router: Router) {}
+
+  // search
   searchTerm = signal('');
 
-  // form visibility
-  showAddForm = signal(false);
-
-  // list of feeds stored as signal
+  // data list
   muxFeeds = signal<Feed[]>([
     { serviceName: 'Movie Plus', lcn: 189, inputIp: '239.7.48.135', inputPort: 8054, preset: 'MAX-H.264-HEVC-SD', status: 'Error' },
     { serviceName: 'MKH News', lcn: 368, inputIp: '239.7.48.135', inputPort: 8134, preset: 'MAX-H.264-HEVC-SD', status: 'Error' },
     { serviceName: 'Verdant SamacharPlus', lcn: 8190, inputIp: '239.7.48.135', inputPort: 8014, preset: 'MAX-H.264-HEVC-SD', status: 'Error' }
   ]);
 
-  // filtered list based on search
   filteredFeeds = signal<Feed[]>([]);
 
-  // computed counts update automatically when filteredFeeds updates
+  // counts
   upCount = computed(() => this.filteredFeeds().filter(f => f.status === 'Success').length);
   downCount = computed(() => this.filteredFeeds().filter(f => f.status === 'Down').length);
   progressCount = computed(() => this.filteredFeeds().filter(f => f.status === 'Progress').length);
@@ -63,29 +61,7 @@ export class MuxComponent implements OnInit {
   onDelete(feed: Feed) {
     console.log('Delete:', feed);
   }
-
   openAddForm() {
-    this.showAddForm.set(true);
-  }
-
-  closeAddForm() {
-    this.showAddForm.set(false);
-  }
-
-  addMuxFeed(newFeed: any) {
-    this.muxFeeds.update(list => [
-      ...list,
-      {
-        serviceName: newFeed.serviceName,
-        lcn: list.length + 1,
-        inputIp: newFeed.inputIp,
-        inputPort: Number(newFeed.inputPort),
-        preset: newFeed.preset,
-        status: 'Progress'
-      }
-    ]);
-
-    this.applyFilter();
-    this.closeAddForm();
+    this.router.navigate(['/mux/add']);
   }
 }

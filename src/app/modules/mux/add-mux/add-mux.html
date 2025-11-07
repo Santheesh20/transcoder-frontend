@@ -1,48 +1,66 @@
-<div class="overlay" (click)="onClose()"></div>
+<div class="page-container">
 
-<div class="modal">
-  <div class="modal-header">
-    <h3>Add Mux</h3>
-    <button class="close-btn" (click)="onClose()">✖</button>
-  </div>
+  <h2 class="page-title">Create Mux</h2>
 
-  <div class="modal-body">
+  <div class="form-card">
 
-    <label>SERVICE NAME</label>
-    <input type="text" [(ngModel)]="formData.serviceName" />
+    <div class="form-grid">
 
-    <label>INPUT IP</label>
-    <input type="text" [(ngModel)]="formData.inputIp" />
+      <div class="form-group">
+        <label>SERVICE NAME*</label>
+        <input type="text" [(ngModel)]="formData.serviceName" />
+      </div>
 
-    <label>INPUT PORT</label>
-    <input type="number" [(ngModel)]="formData.inputPort" />
+      <div class="form-group">
+        <label>INPUT IP*</label>
+        <input type="text" [(ngModel)]="formData.inputIp" />
+      </div>
 
-    <label>PRESET</label>
-    <input type="text" [(ngModel)]="formData.preset" />
+      <div class="form-group">
+        <label>INPUT PORT*</label>
+        <input type="number" [(ngModel)]="formData.inputPort" />
+      </div>
 
-    <label>GPU</label>
-    <input type="text" [(ngModel)]="formData.gpu" />
+      <div class="form-group">
+        <label>PRESET*</label>
+        <input type="text" [(ngModel)]="formData.preset" />
+      </div>
 
-    <div class="checkbox-row">
-      <label><input type="checkbox" [(ngModel)]="formData.encryption" /> Encryption</label>
-      <label><input type="checkbox" [(ngModel)]="formData.pidMapping" /> PID MAPPING</label>
+      <div class="form-group">
+        <label>GPU</label>
+        <input type="text" [(ngModel)]="formData.gpu" />
+      </div>
+
     </div>
 
-    <div class="radio-row">
-      <label><input type="radio" [(ngModel)]="formData.bitrateType" value="CBR" /> CBR</label>
-      <label><input type="radio" [(ngModel)]="formData.bitrateType" value="VBR" /> VBR</label>
+    <div class="form-row">
+      <label class="checkbox"><input type="checkbox" [(ngModel)]="formData.encryption" /> Encryption</label>
+      <label class="checkbox"><input type="checkbox" [(ngModel)]="formData.pidMapping" /> PID MAPPING</label>
     </div>
 
-    <label>CBR BITRATE</label>
-    <input type="text" [(ngModel)]="formData.bitrate" />
+    <div class="form-row">
+      <label class="radio"><input type="radio" [(ngModel)]="formData.bitrateType" value="CBR" /> CBR</label>
+      <label class="radio"><input type="radio" [(ngModel)]="formData.bitrateType" value="VBR" /> VBR</label>
+    </div>
 
-    <label>PROGRAM ID</label>
-    <input type="text" [(ngModel)]="formData.programId" />
+    <div class="form-grid-small">
+      <div class="form-group">
+        <label>CBR BITRATE</label>
+        <input type="text" [(ngModel)]="formData.bitrate" />
+      </div>
+
+      <div class="form-group">
+        <label>PROGRAM ID</label>
+        <input type="text" [(ngModel)]="formData.programId" />
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="cancel" (click)="onCancel()">Cancel</button>
+
+      <button class="add" (click)="onSubmit()">Save</button>
+    </div>
 
   </div>
 
-  <div class="modal-footer">
-    <button class="cancel" (click)="onClose()">Cancel</button>
-    <button class="add" (click)="onSubmit()">Add</button>
-  </div>
 </div>

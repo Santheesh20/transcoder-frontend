@@ -18,7 +18,7 @@ export class DashboardComponent {
     this.router.navigate(['/auth']);
   }
 
-  // ✅ This function will navigate to More Component
+  
   goToMore() {
     this.router.navigate(['/dashboard/more']);
   }
