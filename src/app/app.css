@@ -8,7 +8,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* Layout container */
+
 .main-container {
   display: flex;
   height: 100vh;
@@ -16,7 +16,7 @@
   margin: 0;
 }
 
-/* Sidebar (expanded) */
+
 .sidebar {
   width: 260px;
   background: linear-gradient(180deg, #955846 0%, #a26754 49%, #cb9382 100%);
@@ -30,7 +30,7 @@
   transition: width 0.25s ease;
 }
 
-/* Logo */
+
 .logo-section {
   width: 100%;
   text-align: center;
@@ -44,7 +44,7 @@
   transition: width 0.25s ease;
 }
 
-/* Menu (shared) */
+
 .menu {
   list-style: none;
   padding: 0;
@@ -73,11 +73,11 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* Hover (expanded & collapsed): text + icon white, no background */
+
 .menu a:hover { background: none; color: #ffffff; }
 .menu a:hover i { color: #ffffff !important; }
 
-/* Active: gradient + brown strip */
+
 .menu a.active {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.05) 100%);
   color: #ffffff;
@@ -95,7 +95,7 @@
   opacity: 1;
 }
 
-/* Toggle button */
+
 .toggle-btn {
   font-size: 20px;
   color: white;
@@ -105,32 +105,30 @@
   text-align: left;
 }
 
-/* ---------- COLLAPSED STATE TO MATCH YOUR REFERENCE ---------- */
 
-/* Width of collapsed rail (close to your screenshot) */
+
+
 .main-container.collapsed .sidebar { width: 120px; }  /* was 80px */
 
-/* Slightly larger logo in collapsed state */
 .main-container.collapsed .logo { width: 55%; }
 
-/* In collapsed, we DO show labels: stack icon above label, center both */
+
 .main-container.collapsed .menu a {
   justify-content: center;
   align-items: center;
-  flex-direction: column;      /* icon on top, text below */
+  flex-direction: column;     
   gap: 8px;
-  padding: 14px 0;             /* equal vertical padding */
+  padding: 14px 0;             
   text-align: center;
 }
 
-/* Icon a touch larger for readability in the rail */
 .main-container.collapsed .menu a i {
   font-size: 20px;
   min-width: 0;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Label visible (smaller) under icon in collapsed */
+
 .main-container.collapsed .menu a span {
   display: block;
   font-size: 12px;
@@ -138,14 +136,13 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Keep active bar but hide the right strip in narrow rail (like your ref) */
 .main-container.collapsed .menu a.active::after { display: none; }
 
-/* Keep hover consistent in collapsed */
+
 .main-container.collapsed .menu a:hover { color: #fff; }
 .main-container.collapsed .menu a:hover i { color: #fff !important; }
 
-/* ---------- CONTENT: FLEX (no gaps) ---------- */
+
 .content {
   flex: 1;
   min-width: 0;
