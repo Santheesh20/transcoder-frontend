@@ -1,4 +1,3 @@
-
 <div
   class="main-container"
   [ngClass]="{ 'collapsed': isCollapsed() }"
@@ -6,55 +5,48 @@
 >
   <!-- left side menu area -->
   <div class="sidebar">
-    <!-- logo on top -->
+    
     <div class="logo-section">
       <img src="assets/logo-white.png" alt="Logo" class="logo" />
     </div>
 
-    <!-- menu links list -->
     <ul class="menu">
 
-      <!-- link to dashboard page -->
       <li>
         <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           <i class="fa-solid fa-house"></i>
-          <span *ngIf="!isCollapsed()">Dashboard</span>
+          <span>Dashboard</span>
         </a>
       </li>
 
-      <!-- link to mux page -->
       <li>
         <a routerLink="/mux" routerLinkActive="active">
           <i class="fa-solid fa-film"></i>
-          <span *ngIf="!isCollapsed()">Mux</span>
+          <span>Mux</span>
         </a>
       </li>
 
-      <!-- link to feed checker page -->
       <li>
         <a routerLink="/feedchecker" routerLinkActive="active">
           <i class="fa-solid fa-check-double"></i>
-          <span *ngIf="!isCollapsed()">Feed Checker</span>
+          <span>Feed Checker</span>
         </a>
       </li>
 
-      <!-- link to profile page -->
       <li>
         <a routerLink="/profile" routerLinkActive="active">
           <i class="fa-solid fa-user"></i>
-          <span *ngIf="!isCollapsed()">Profile</span>
+          <span>Profile</span>
         </a>
       </li>
 
-      <!-- logout option -->
       <li>
         <a (click)="logout()">
           <i class="fa-solid fa-right-from-bracket"></i>
-          <span *ngIf="!isCollapsed()">Logout</span>
+          <span>Logout</span>
         </a>
       </li>
 
-      <!-- button to collapse/expand sidebar -->
       <div class="toggle-btn" (click)="toggleSidebar()">
         <i class="fa-solid fa-bars-staggered"></i>
       </div>
@@ -62,13 +54,11 @@
     </ul>
   </div>
 
-  <!-- right side content area where pages load -->
   <div class="content">
     <router-outlet></router-outlet>
   </div>
 </div>
 
-<!-- this  is only for auth page -->
 <div *ngIf="isAuthRoute()" class="auth-wrapper">
   <router-outlet></router-outlet>
 </div>
