@@ -91,17 +91,16 @@
   overflow-y: auto;
 }
 
-
 .header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 14px;
+  padding: 4px 14px;
   background: transparent;
   border-bottom: 1px solid #dcdcdc;
   position: sticky;
   top: 0;
-  z-index: 100; 
+  z-index: 100;
 }
 
 
@@ -111,14 +110,24 @@
   font-size: 20px;
   cursor: pointer;
   color: #444;
+  display: flex;            
+  align-items: center;      
+}
+
+
+.header-toggle-btn .toggle {
+  display: block;
+  width: 20px;
+  height: auto;
 }
 
 
 .header-right {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: center;       
 }
+
 
 .user-info {
   display: flex;
@@ -177,3 +186,4 @@
 .modal.show {
   z-index: 6000 !important;
 }
+

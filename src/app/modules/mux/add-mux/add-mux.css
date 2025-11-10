@@ -25,7 +25,7 @@
 
 .form-group label {
   font-size: 13px;
-  color: #444;
+  color: #0b0b0b;
   display: block;
   margin-bottom: 4px;
 }
@@ -45,7 +45,7 @@
 
 .checkbox, .radio {
   font-size: 14px;
-  color: #444;
+  color: #252424;
 }
 
 .btn-row {

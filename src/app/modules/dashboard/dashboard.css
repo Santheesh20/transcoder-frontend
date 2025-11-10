@@ -1,4 +1,4 @@
-/* PAGE TITLE (✅ removed underline, adjusted spacing) */
+
 .page-title {
   font-size: 26px;
   font-weight: 600;
@@ -6,13 +6,12 @@
   margin: 12px 0 28px 2px;
 }
 
-/* highlighted word */
+
 .highlight {
   color: #a26754;
   font-weight: bold;
 }
 
-/* Status box layout */
 .status-boxes {
   display: flex;
   gap: 25px;
@@ -59,13 +58,13 @@
   font-weight: 500;
 }
 
-/* Box colors */
+
 .up { background-color: #cb9382; }
 .down { background-color: #fd5564; }
 .progress { background-color: #fd7045; }
 .error { background-color: #7b4859; }
 
-/* System metrics layout */
+
 .system-metrics h2 {
   margin-bottom: 20px;
   color: #333;
