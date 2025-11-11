@@ -1,0 +1,42 @@
+<section class="login-widget">
+    <div class="row">
+        <div class="col-md-6 col-sm-7">
+            <div class="login-right-widget"></div>
+        </div>
+        <div class="col-md-6 col-sm-5">
+            <div class="login-left-widget">
+                <div class="logo">
+                    <img src="images/logo.png" class="logo-desktop" alt="logo" />
+                    <img src="images/logo-white.png" class="logo-mobile" alt="logo" />
+                </div>
+                <h1>Hello, <span>Welcome Back</span></h1>
+                <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="form-group input-widget">
+                        <label>Username</label>
+                        <mat-form-field appearance="outline" class="country-code-widget">
+                            <input matInput type="text" placeholder="Enter your username" formControlName="username"
+                                required />
+                            <mat-error class="error">
+                                {{errorService.checkErrorMessage(loginForm.get('username'), 'Username')}}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group input-widget">
+                        <label>Password</label>
+                        <mat-form-field appearance="outline" class="country-code-widget">
+                            <input matInput type="password" placeholder="Enter your password" formControlName="password"
+                                required />
+                            <mat-error class="error">
+                                {{errorService.checkErrorMessage(loginForm.get('password'), 'Password')}}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <a href="javascript:void(0)" class="text-right">Forgot Password?</a>
+                    <div class="form-group">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

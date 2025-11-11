@@ -1,0 +1,89 @@
+.table-top-widget {
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.table-top-widget span {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.table-top-widget .entries-info {
+    white-space: nowrap;
+}
+
+.select-entry {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.select-entry select {
+    padding: 6px 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.pagination-custom {
+    display: inline-block;
+}
+
+.pagination-custom ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pagination-custom li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.pagination-custom li a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.pagination-custom li a:hover {
+    background: #f3f3f3;
+}
+
+.pagination-custom li a.active {
+    background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
+    color: #fff;
+}
+
+.pagination-custom img {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+.pagination-custom a.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .table-top-widget .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .table-top-widget .col-md-5,
+    .table-top-widget .col-md-7 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pagination-custom ul {
+        justify-content: center;
+    }
+}

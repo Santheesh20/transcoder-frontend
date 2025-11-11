@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-mux',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
+  standalone: false,
   templateUrl: './add-mux.html',
   styleUrls: ['./add-mux.css']
 })
 export class AddMuxComponent {
 
-  constructor(private router: Router) {}
+  private location = inject(Location);
 
   formData = {
     serviceName: '',
@@ -31,7 +28,8 @@ export class AddMuxComponent {
     
   }
 
-  onCancel() {
-    this.router.navigate(['/mux']);
+  goBack() {
+    const me = this;
+    me.location.back();
   }
 }

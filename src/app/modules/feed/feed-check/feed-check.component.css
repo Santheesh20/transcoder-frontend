@@ -1,0 +1,151 @@
+/* outer container */
+.feed-checker-container {
+  padding: 20px 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* title text */
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #991f1f;
+  margin-bottom: 20px;
+}
+
+/* radio button row */
+.radio-group {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+/* label for radio */
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+/* small label text */
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #991f1f;
+  margin-bottom: 5px;
+}
+
+/* dropdown box style */
+.dropdown {
+  position: relative;
+  width: 350px;
+  border-bottom: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* input inside dropdown */
+.dropdown input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size: 16px;
+  background: transparent;
+}
+
+/* arrow position */
+.arrow {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 12px;
+}
+
+/* dropdown list box */
+.dropdown-list {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 100;
+  margin-top: 3px;
+}
+
+/* each channel item */
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* dropdown hover effect */
+.dropdown-list li:hover {
+  background: #f3f3f3;
+}
+
+/* row of IP and PORT side by side */
+.ip-port-row {
+  display: flex;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+/* input group for label + input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* label above input */
+.input-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7b3f37;
+  margin-bottom: 5px;
+}
+
+/* underline input style */
+.underline-input {
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 8px 0;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+/* underline color when typing */
+.underline-input:focus {
+  border-bottom-color: #a26754;
+}
+
+/* check button style */
+.check-btn {
+  margin-top: 20px;
+  background: #b12c19;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* hover effect */
+.check-btn:hover {
+  opacity: 0.9;
+}
+
+/* output box */
+.output-box {
+  margin-top: 25px;
+  width: 95%;
+  height: 250px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 15px;
+}

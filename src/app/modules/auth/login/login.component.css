@@ -1,0 +1,202 @@
+.logo-mobile {
+    display: none;
+}
+
+.login-widget {
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh
+}
+
+.login-right-widget {
+    position: relative;
+    height: 100vh;
+    background: url("../../../../assets/images/login-bg.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.login-left-widget {
+    position: relative;
+    padding: 50px 100px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.login-left-widget h1 {
+    font-family: 'robotoblack';
+    margin: 20px 0;
+}
+
+.login-left-widget h1 span {
+    display: block;
+}
+
+.login-form span {
+    font-size: 13px;
+    font-family: 'robotobold';
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-widget {
+    margin: 10px 0 15px;
+}
+
+.input-widget label {
+    margin: 0 0 7px;
+    display: block;
+    font-weight: 500;
+    opacity: .6;
+}
+
+.input-widget input {
+    display: block;
+    width: 100%;
+    font-family: 'robotoregular';
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.input-widget input:focus,
+.login-form button:focus {
+    outline: none !important;
+}
+
+.login-form a {
+    font-size: 13px;
+    font-family: 'robotobold';
+    display: block;
+    color: #000;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    color: #955846;
+}
+
+.login-form button {
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+    background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
+    color: #fff;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-form p {
+    text-align: center;
+    margin: 50px 0 0;
+}
+
+.login-form p a {
+    display: block;
+}
+
+.powered-by a img {
+    width: 90px;
+}
+
+@media only screen and (max-width:1150px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .login-left-widget {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .login-right-widget {
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .login-widget .col-sm-5 {
+        width: 100%;
+        max-width: 100%;
+        flex: 100%;
+    }
+
+    .login-left-widget {
+        padding: 30px;
+        height: 100vh;
+        background: url("../../../../assets/images/login-mobile-bg.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .login-right-widget {
+        display: none;
+    }
+
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+
+    .login-left-widget h1,
+    .login-form span,
+    .input-widget label,
+    .login-form a,
+    .login-form p,
+    .login-form p a {
+        color: #fff;
+    }
+
+    .input-widget input {
+        background: none;
+        color: #fff;
+    }
+
+    .login-form a:hover {
+        color: #000;
+    }
+
+    .login-form button,
+    .login-form button:hover {
+        background: #fff;
+        color: #955846;
+        font-weight: 600;
+    }
+
+    ::placeholder {
+        color: #fff;
+        opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+        color: #fff;
+    }
+
+    ::-ms-input-placeholder {
+        color: #fff;
+    }
+
+}
+
+@media only screen and (max-width:1200px) {
+    .login-right-widget {
+        height: 100vh;
+        background-size: cover;
+    }
+}

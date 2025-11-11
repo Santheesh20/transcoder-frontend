@@ -1,66 +1,60 @@
-<div class="page-container">
+<div class="inner-content">
+  <div class="page-container">
+    <h2 class="page-title">Create Mux</h2>
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>SERVICE NAME*</label>
+          <input type="text" [(ngModel)]="formData.serviceName" />
+        </div>
 
-  <h2 class="page-title">Create Mux</h2>
+        <div class="form-group">
+          <label>INPUT IP*</label>
+          <input type="text" [(ngModel)]="formData.inputIp" />
+        </div>
 
-  <div class="form-card">
+        <div class="form-group">
+          <label>INPUT PORT*</label>
+          <input type="number" [(ngModel)]="formData.inputPort" />
+        </div>
 
-    <div class="form-grid">
+        <div class="form-group">
+          <label>PRESET*</label>
+          <input type="text" [(ngModel)]="formData.preset" />
+        </div>
 
-      <div class="form-group">
-        <label>SERVICE NAME*</label>
-        <input type="text" [(ngModel)]="formData.serviceName" />
+        <div class="form-group">
+          <label>GPU</label>
+          <input type="text" [(ngModel)]="formData.gpu" />
+        </div>
       </div>
 
-      <div class="form-group">
-        <label>INPUT IP*</label>
-        <input type="text" [(ngModel)]="formData.inputIp" />
+      <div class="form-row">
+        <label class="checkbox"><input type="checkbox" [(ngModel)]="formData.encryption" /> Encryption</label>
+        <label class="checkbox"><input type="checkbox" [(ngModel)]="formData.pidMapping" /> PID MAPPING</label>
       </div>
 
-      <div class="form-group">
-        <label>INPUT PORT*</label>
-        <input type="number" [(ngModel)]="formData.inputPort" />
+      <div class="form-row">
+        <label class="radio"><input type="radio" [(ngModel)]="formData.bitrateType" value="CBR" /> CBR</label>
+        <label class="radio"><input type="radio" [(ngModel)]="formData.bitrateType" value="VBR" /> VBR</label>
       </div>
 
-      <div class="form-group">
-        <label>PRESET*</label>
-        <input type="text" [(ngModel)]="formData.preset" />
+      <div class="form-grid-small">
+        <div class="form-group">
+          <label>CBR BITRATE</label>
+          <input type="text" [(ngModel)]="formData.bitrate" />
+        </div>
+
+        <div class="form-group">
+          <label>PROGRAM ID</label>
+          <input type="text" [(ngModel)]="formData.programId" />
+        </div>
       </div>
 
-      <div class="form-group">
-        <label>GPU</label>
-        <input type="text" [(ngModel)]="formData.gpu" />
+      <div class="btn-row">
+        <button class="cancel" (click)="goBack()">Back</button>
+        <button class="add" (click)="onSubmit()">Save</button>
       </div>
-
     </div>
-
-    <div class="form-row">
-      <label class="checkbox"><input type="checkbox" [(ngModel)]="formData.encryption" /> Encryption</label>
-      <label class="checkbox"><input type="checkbox" [(ngModel)]="formData.pidMapping" /> PID MAPPING</label>
-    </div>
-
-    <div class="form-row">
-      <label class="radio"><input type="radio" [(ngModel)]="formData.bitrateType" value="CBR" /> CBR</label>
-      <label class="radio"><input type="radio" [(ngModel)]="formData.bitrateType" value="VBR" /> VBR</label>
-    </div>
-
-    <div class="form-grid-small">
-      <div class="form-group">
-        <label>CBR BITRATE</label>
-        <input type="text" [(ngModel)]="formData.bitrate" />
-      </div>
-
-      <div class="form-group">
-        <label>PROGRAM ID</label>
-        <input type="text" [(ngModel)]="formData.programId" />
-      </div>
-    </div>
-
-    <div class="btn-row">
-      <button class="cancel" (click)="onCancel()">Cancel</button>
-
-      <button class="add" (click)="onSubmit()">Save</button>
-    </div>
-
   </div>
-
 </div>

@@ -1,0 +1,83 @@
+<div class="inner-content">
+  <div class="container py-4">
+    <h1 class="text-center mb-4">
+      Welcome to <span class="highlight">Transcoder</span>
+    </h1>
+
+    <!-- Status Boxes -->
+    <div class="row g-3 text-center">
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 bg-success text-white">
+          <div class="card-body">
+            <h3><i class="fa-solid fa-arrow-up me-2"></i>67</h3>
+            <p class="mb-0 fw-semibold">UP</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 bg-secondary text-white">
+          <div class="card-body">
+            <h3><i class="fa-solid fa-arrow-down me-2"></i>0</h3>
+            <p class="mb-0 fw-semibold">DOWN</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 bg-info text-white">
+          <div class="card-body">
+            <h3><i class="fa-solid fa-spinner me-2"></i>0</h3>
+            <p class="mb-0 fw-semibold">PROGRESS</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 bg-danger text-white">
+          <div class="card-body">
+            <h3><i class="fa-solid fa-circle-exclamation me-2"></i>2</h3>
+            <p class="mb-0 fw-semibold">ERROR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- System Metrics -->
+    <div class="mt-5">
+      <h2 class="mb-3 text-center text-uppercase text-muted">System Metrics</h2>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center border-primary border-2">
+            <div class="card-body">
+              <p class="display-6 fw-bold text-primary mb-1">9.60%</p>
+              <p class="text-muted mb-3">CPU</p>
+              <button class="btn btn-outline-primary btn-sm">Refresh</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center border-success border-2">
+            <div class="card-body">
+              <p class="display-6 fw-bold text-success mb-1">79Gi</p>
+              <p class="text-muted mb-3">RAM</p>
+              <button class="btn btn-outline-success btn-sm">Refresh</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center border-warning border-2">
+            <div class="card-body">
+              <p class="display-6 fw-bold text-warning mb-1">GPU</p>
+              <p class="text-muted mb-3">NVIDIA</p>
+              <a class="btn btn-outline-warning btn-sm" [routerLink]="masterData.gpuPath">More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

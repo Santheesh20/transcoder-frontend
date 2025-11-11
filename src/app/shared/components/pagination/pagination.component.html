@@ -1,0 +1,69 @@
+<div class="table-top-widget">
+    <div class="row align-items-center">
+        <!-- Showing info + records per page -->
+        <div class="col-md-5 col-sm-4 d-flex align-items-center">
+            <span class="entries-info">
+                Showing {{ ((activePage - 1) * recordsPerPage) + 1 }}
+                to
+                {{ (activePage * recordsPerPage) < totalCount ? (activePage * recordsPerPage) : totalCount }} of {{
+                    totalCount }} entries </span>
+
+                    <div class="select-entry ml-2">
+                        <select [(ngModel)]="recordsPerPage" (change)="onRecordsPerPageChange()">
+                            <option [ngValue]="15">15</option>
+                            <option [ngValue]="25">25</option>
+                            <option [ngValue]="50">50</option>
+                        </select>
+                    </div>
+        </div>
+
+        <!-- Pagination controls -->
+        <div class="col-md-7 col-sm-8 text-right">
+            <div class="pagination-custom">
+                <ul class="pagination mb-0">
+                    <!-- First Page -->
+                    <li>
+                        <a href="javascript:void(0);" class="f-prev-btn"
+                            [class.disabled]="activePage === _.first(pages)" (click)="onClickPage(_.first(pages))">
+                            <img src="images/icon-arrow-left-last.png" alt="First" />
+                        </a>
+                    </li>
+
+                    <!-- Previous Page -->
+                    <li>
+                        <a href="javascript:void(0);" class="prev-btn" [class.disabled]="activePage === _.first(pages)"
+                            (click)="onClickPage(activePage - 1)">
+                            <img src="images/icon-arrow-left.png" alt="Previous" />
+                        </a>
+                    </li>
+
+                    <!-- Page Numbers -->
+                    <ng-container *ngFor="let page of pages">
+                        <li *ngIf="page <= activePage + 1 && page >= activePage - 1">
+                            <a href="javascript:void(0);" [ngClass]="{ 'active': activePage === page }"
+                                (click)="onClickPage(page)">
+                                {{ page }}
+                            </a>
+                        </li>
+                    </ng-container>
+
+                    <!-- Next Page -->
+                    <li>
+                        <a href="javascript:void(0);" class="next-btn" [class.disabled]="activePage === _.last(pages)"
+                            (click)="onClickPage(activePage + 1)">
+                            <img src="images/icon-arrow-right.png" alt="Next" />
+                        </a>
+                    </li>
+
+                    <!-- Last Page -->
+                    <li>
+                        <a href="javascript:void(0);" class="f-next-btn" [class.disabled]="activePage === _.last(pages)"
+                            (click)="onClickPage(_.last(pages))">
+                            <img src="images/icon-arrow-right-last.png" alt="Last" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

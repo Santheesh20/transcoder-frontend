@@ -1,0 +1,143 @@
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar.active .sidebar-header .logo img {
+    width: 80%;
+}
+
+#sidebar.active ul li a {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 0 15px 0;
+
+}
+
+#sidebar.active ul li a img {
+    display: block;
+    margin: 0 auto 5px;
+}
+
+#sidebar .sidebar-header {
+    padding: 12px;
+
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px 10px 10px 35px;
+    opacity: .5;
+    font-size: 14px;
+}
+
+#sidebar ul li a {
+    position: relative;
+    padding: 15px 0 15px 25px;
+    font-size: 15px;
+    display: block;
+    margin: 5px 0;
+    opacity: .5;
+}
+
+#sidebar ul li a:hover {
+    opacity: 1;
+}
+
+#sidebar ul li.active>a {
+    color: #ffffff;
+    background: linear-gradient(312deg, #A26754 0%, #CB9382 100%);
+    opacity: 1;
+    position: relative;
+
+}
+
+#sidebar ul li.active>a:after {
+    position: absolute;
+    content: '';
+    background: #804D3C;
+    right: 0;
+    width: 5px;
+    top: 0;
+    bottom: 0;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding: 10px 0 !important;
+    padding-left: 58px !important;
+
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+#sidebar.active {
+    margin-left: 0;
+    width: 120px;
+}
+
+#sidebar ul li a img {
+    width: 18px;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+}
+
+.sidebar-header .logo {
+    padding-left: 20px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.sidebar-header .logo img {
+    width: 35%;
+}
