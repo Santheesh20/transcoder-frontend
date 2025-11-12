@@ -1,7 +1,126 @@
+/* ======================
+   DASHBOARD CARD BODY
+   ====================== */
 .card-body i {
   margin-right: 10px;
 }
 
 .card-body p {
   color: #fff;
+}
+
+/* ======================
+   GENERAL PAGE STYLE
+   ====================== */
+.inner-content {
+  padding: 25px;
+  margin-top: 70px;
+  background: #f9faff;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+
+/* ======================
+   STATUS BOXES (TOP CARDS)
+   ====================== */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 30px 15px;
+}
+
+.card-body h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-body i {
+  margin-right: 8px;
+  font-size: 22px;
+}
+
+.card-body p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Bootstrap color overrides for smoother tones */
+.bg-success {
+  background-color: #13c672 !important;
+}
+
+.bg-secondary {
+  background-color: #7b7b7b !important;
+}
+
+.bg-info {
+  background-color: #fd7045 !important;
+}
+
+.bg-danger {
+  background-color: #fc4148 !important;
+}
+
+/* ======================
+   SYSTEM METRICS SECTION
+   ====================== */
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.card.text-center {
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.text-center:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-body .display-6 {
+  font-size: 1.8em;
+  color: #a26754;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.card-body .text-muted {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Gradient buttons that match global export/dialog buttons */
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-warning {
+  background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
+  color: #fff !important;
+  border: none !important;
+  transition: 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-warning:hover {
+  filter: brightness(0.9);
 }

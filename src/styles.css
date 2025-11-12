@@ -1,309 +1,128 @@
 @charset "utf-8";
-/* CSS Document */
+/* Global Style Sheet – Safe Utilities + Login support merged */
 
+/* ---------- Font Faces ---------- */
 @font-face {
-    font-family: 'robotoblack';
-    src: url('./assets/fonts/roboto-black-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'robotoblack';
+  src: url('./assets/fonts/roboto-black-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'robotobold';
+  src: url('./assets/fonts/roboto-bold-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'robotomedium';
+  src: url('./assets/fonts/roboto-medium-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url('./assets/fonts/roboto-regular-webfont.woff2') format('woff2');
 }
 
-@font-face {
-    font-family: 'robotobold';
-    src: url('./assets/fonts/roboto-bold-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'robotomedium';
-    src: url('./assets/fonts/roboto-medium-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'robotoregular';
-    src: url('./assets/fonts/roboto-regular-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
+/* ---------- Global Base ---------- */
 body {
-    margin: 0;
-    line-height: normal;
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+  margin: 0;
+  line-height: normal;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
 }
 
 a,
 a:hover,
 a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
+/* ---------- Layout Container ---------- */
 .inner-content {
-    padding: 25px;
-    margin-top: 70px;
-    background: #f9faff;
+  padding: 25px;
+  margin-top: 70px;
+  background: #f9faff;
 }
 
-.inner-content .page-header {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.table-main-widget {
-    position: relative;
-    margin-top: 15px;
-}
-
-.table-main-widget table {
-    width: 100%;
-    white-space: nowrap;
-}
-
-.table-main-widget table tbody tr {
-    background: #ffffff;
-    border-bottom: 8px solid #f9faff;
-}
-
-.table-main-widget table th,
-.table-main-widget table td {
-    font-size: 14px;
-    padding: 8px 15px;
-    color: #000;
-    font-weight: 500;
-}
-
-.table-main-widget table th {
-    color: #000;
-    opacity: .5;
-    font-weight: 500;
-}
-
-.table-main-widget table th i {
-    position: relative;
-    display: inline-block;
-    margin-left: 5px;
-    vertical-align: text-bottom;
-}
-
-.table-main-widget table th i img {
-    width: 6px;
-}
-
-.current-status1,
-.current-status2 {
-    background: #13c67238;
-    color: #13c672;
-    padding: 3px 0px;
-    border-radius: 30px;
-    width: 80px;
-    display: inline-block;
-    text-align: center;
-}
-
-.current-status2 {
-    background: #fc414840;
-    color: #fc4148;
-}
-
-.page-action-widget .search-widget {
-    display: inline-block;
-    position: relative;
-}
-
-.page-action-widget .search-widget input {
-    width: 270px;
-    background: transparent;
-    border: 1px solid #53433f;
-    padding: 0px 15px 0px 40px;
-    height: 40px;
-    font-size: 14px;
-    border-radius: 6px;
-    vertical-align: middle;
-}
-
-.page-action-widget .search-widget img {
-    position: absolute;
-    left: 15px;
-    width: 18px;
-    height: 18px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.page-action-widget .add-new-btn {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.page-action-widget .add-new-btn a {
-    position: relative;
-    display: block;
-    padding: 8px 20px;
-    background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
-    color: #fff;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.page-action-widget .add-new-btn a span {
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    top: -2px;
-    margin-right: 10px;
-}
-
-.page-action-widget .add-new-btn a span img {
-    width: 16px;
-}
-
-.status-active,
-.status-inactive,
-.status-suspended,
-.status-blacklist {
-    background: #13c67238;
-    color: #13C672;
-    padding: 3px 0px;
-    border-radius: 30px;
-    width: 90px;
-    display: inline-block;
-    text-align: center;
-}
-
-.status-inactive {
-    background: #fc414840;
-    color: #FC4148;
-}
-
-.status-suspended {
-    background: #F2DDFF;
-    color: #8d3ac3;
-}
-
-.status-blacklist {
-    background: #F3F3F3;
-    color: #7b7b7b;
-}
-
-.table-main-widget table td div {
-    position: relative;
-}
-
-.table-main-widget table td div.dropdown-menu.profile-dropdown {
-    left: auto !important;
-    min-width: 120px;
-}
-
-.empty_data img {
-    width: 30%;
-}
-
-.empty_data h4 {
-    opacity: .4
-}
-
-.page-title h4 a {
-    position: relative;
-    display: inline-block;
-    border: 2px solid;
-    vertical-align: bottom;
-    width: 28px;
-    height: 28px;
-    text-align: center;
-    border-radius: 8px;
-    line-height: 20px;
-    margin-right: 12px;
-}
-
-.page-title h4 a img {
-    width: 14px;
-}
-
-.export-btn {
-    background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
-    padding: 10px 50px;
-    border-radius: 4px;
-    margin-top: 5px;
-    margin-left: 5px;
-    color: #fff;
-    float: right;
-    border: none;
-    cursor: pointer;
-}
-
-.snackbar {
-    margin: 0 !important;
-    position: absolute;
-    right: 25px;
-    top: 60px;
-}
-
-.overflow {
-    float: none;
-    width: 400px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    position: relative;
-    display: inline-block;
-}
-
-mat-form-field {
-    width: 100%;
-}
-
-.mat-mdc-dialog-surface {
-    padding: 25px !important;
-}
-
-.dialog-header {
-    padding-bottom: 20px;
-}
-
-.dialog-btn {
-    text-align: right;
-    margin-top: 10px;
-}
-
-.dialog-btn button {
-    background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
-    border: none;
-    color: #fff;
-    padding: 8px 40px;
-    border-radius: 4px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.dialog-btn button:first-child {
-    background: #C0C0C0;
-}
-
+/* ---------- Typography Helpers ---------- */
 .highlight {
   color: #a26754;
 }
 
+/* ---------- Buttons ---------- */
+.export-btn {
+  background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
+  padding: 10px 50px;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #fff;
+  float: right;
+  border: none;
+  cursor: pointer;
+}
+
+.dialog-btn {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.dialog-btn button {
+  background: linear-gradient(120deg, #955846 0%, #a26754 49%, #cb9382 100%);
+  border: none;
+  color: #fff;
+  padding: 8px 40px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.dialog-btn button:first-child {
+  background: #c0c0c0;
+}
+
+/* ---------- Snackbar / Overflow (Optional Global Widgets) ---------- */
+.snackbar {
+  margin: 0 !important;
+  position: absolute;
+  right: 25px;
+  top: 60px;
+}
+
+.overflow {
+  float: none;
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  display: inline-block;
+}
+
+/* ---------- Angular Material Adjustments ---------- */
+.mat-mdc-dialog-surface {
+  padding: 25px !important;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-error {
+  font-size: 13px;
+  color: #fc4148 !important;
+  font-weight: 500;
+}
+
+/* ---------- Responsive Tweaks ---------- */
 @media (max-width: 768px) {
-    .no-records img {
-        width: 70%;
-    }
+  .no-records img {
+    width: 70%;
+  }
 }

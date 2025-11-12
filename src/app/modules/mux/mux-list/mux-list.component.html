@@ -2,6 +2,7 @@
   <div class="mux-wrapper">
     <h1><span class="highlight">Mux</span> List</h1>
 
+    <!-- STATUS BOXES -->
     <div class="status-boxes">
       <div class="box up">
         <p class="number"><i class="fa-solid fa-arrow-up"></i> {{ upCount() }}</p>
@@ -24,6 +25,7 @@
       </div>
     </div>
 
+    <!-- ACTION BAR -->
     <div class="top-bar">
       <input type="text" placeholder="Search" class="search-box" [ngModel]="searchTerm()"
         (ngModelChange)="searchTerm.set($event); applyFilter()" />
@@ -36,6 +38,7 @@
       </div>
     </div>
 
+    <!-- TABLE -->
     <table class="mux-table">
       <thead>
         <tr>

@@ -1,4 +1,3 @@
-
 .mux-wrapper {
   padding: 24px;
   font-family: 'Inter', Arial, sans-serif;
@@ -6,66 +5,101 @@
   color: #333;
 }
 
+
 h1 {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
+
+.highlight {
+  color: #a26754;
+  font-weight: bold;
+}
+
 
 .status-boxes {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 30px;
+  align-items: stretch;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: nowrap;
 }
 
 .status-boxes .box {
-  background: white;
-  padding: 24px 16px;
+  flex: 1 1 0;
+  min-height: 130px;
+  max-height: 130px;
+  background: #fff;
+  padding: 28px 18px;
   border-radius: 10px;
-  flex: 1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 8px solid transparent;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
+
+
+.status-boxes .box:nth-child(1),
+.status-boxes .box:nth-child(2),
+.status-boxes .box:nth-child(3),
+.status-boxes .box:nth-child(4) {
+  width: 100%;
+}
+
 
 .status-boxes .box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+
+.status-boxes .box.up {
+  border-left: 8px solid #13c672 !important;
+  background: #eafaf2 !important;
+}
+
+.status-boxes .box.down {
+  border-left: 8px solid #fc4148 !important;
+  background: #fff4f4 !important;
+}
+
+.status-boxes .box.progress {
+  border-left: 8px solid #ffb300 !important;
+  background: #fff8e1 !important;
+}
+
+.status-boxes .box.error {
+  border-left: 8px solid #7b4859 !important;
+  background: #fbe9ec !important;
+}
+
+/* ------------------------------
+   TEXT INSIDE BOX
+------------------------------ */
 .status-boxes .number {
-  font-size: 32px;
-  margin-bottom: 6px;
+  font-size: 30px;
+  margin-bottom: 4px;
   font-weight: 700;
+  color: #333;
 }
 
 .status-boxes .box p:last-child {
-  font-size: 14px;
-  color: #666;
-  letter-spacing: 0.5px;
+  font-size: 13.5px;
+  color: #555;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-
-.box.up {
-  border-left: 5px solid #28a745;
-}
-
-.box.down {
-  border-left: 5px solid #dc3545;
-}
-
-.box.progress {
-  border-left: 5px solid #ffc107;
-}
-
-.box.error {
-  border-left: 5px solid #d9534f;
-}
-
+/* ------------------------------
+   SEARCH + ACTIONS
+------------------------------ */
 .top-bar {
   display: flex;
   align-items: center;
@@ -107,6 +141,9 @@ h1 {
 .btn.export { background: #d6d8db; color: #343a40; }
 .btn.export:hover { background: #c6c8ca; }
 
+/* ------------------------------
+   MUX TABLE
+------------------------------ */
 .mux-table {
   width: 100%;
   border-collapse: collapse;
@@ -135,6 +172,9 @@ h1 {
   background: #f8f9fa;
 }
 
+/* ------------------------------
+   STATUS DOT + ICONS
+------------------------------ */
 .status-dot {
   width: 12px;
   height: 12px;
@@ -146,7 +186,6 @@ h1 {
 .status-dot.Error { background: #dc3545; }
 .status-dot.Warning { background: #ffc107; }
 .status-dot.Down { background: #6c757d; }
-
 
 .edit-icon, .delete-icon {
   cursor: pointer;
